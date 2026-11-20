@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Save Every Drop – Campus Water Conservation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" data-nav="home">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Save Every Drop</strong>
+          <small>BU100 SDG Action Lab</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+        <button class="nav-link active" data-nav="home">Home</button>
+        <button class="nav-link" data-nav="report">Report Wastage</button>
+        <button class="nav-link" data-nav="awareness">Awareness</button>
+        <button class="nav-link" data-nav="survey">Quick Survey</button>
+        <button class="nav-link" data-nav="dashboard">Impact Dashboard</button>
+        <button class="nav-link" data-nav="admin">Admin / Data</button>
+        <button class="nav-link" data-nav="about">Project Info</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Data Status Banner -->
+  <div class="status-strip" id="global-data-banner" role="status">
+    <div class="container status-strip-inner">
+      <span id="global-data-banner-text"></span>
+      <button class="link-btn" data-nav="admin">Manage Data</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    <!-- ==================== HOME / DASHBOARD ==================== -->
+    <section id="view-home" class="view active" aria-labelledby="home-heading">
+      <div class="hero-card">
+        <div class="hero-content">
+          <span class="pill pill-sdg">Primary Focus: SDG 6 – Clean Water & Sanitation</span>
+          <h1 id="home-heading">Save Every Drop</h1>
+          <p class="hero-subtitle">Campus Water Conservation Initiative</p>
+          <p class="hero-text">
+            Across university campuses, everyday water wastage—such as dripping washroom taps,
+            taps left running, and leaking water coolers—often goes unnoticed or unreported.
+            <strong>Save Every Drop</strong> gives students a simple way to report campus water issues,
+            build daily conservation habits, and measure awareness over time.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-nav="report">Report Water Wastage</button>
+            <button class="btn btn-secondary" data-nav="survey">Take 1-Minute Survey</button>
+          </div>
+        </div>
+
+        <aside class="sdg-card" aria-label="SDG 6 Information">
+          <div class="sdg-badge-box">
+            <span class="sdg-number">6</span>
+            <div class="sdg-label">
+              <strong>CLEAN WATER<br />AND SANITATION</strong>
+            </div>
+            <svg class="sdg-drop" viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              <path d="M9.5 14.5a3 3 0 0 0 3 2.5"></path>
+            </svg>
+          </div>
+          <p class="sdg-desc">
+            Supports <strong>Target 6.4</strong> (substantially increase water-use efficiency) by encouraging
+            responsible daily consumption and faster maintenance reporting on campus.
+          </p>
+        </aside>
+      </div>
+
+      <!-- 3 Simple Impact Cards -->
+      <div class="section-header-inline">
+        <h2>Campus Impact Snapshot</h2>
+        <span class="data-mode-pill" id="home-data-badge">Includes Demo Data</span>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <div class="kpi-icon kpi-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <div>
+            <p class="kpi-label">Reports Submitted</p>
+            <p class="kpi-value" id="kpi-reports">0</p>
+            <p class="kpi-sub" id="kpi-reports-sub">0 actual · 0 demo</p>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-icon kpi-teal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 11l3 3L22 4"></path>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="kpi-label">Awareness Responses</p>
+            <p class="kpi-value" id="kpi-surveys">0</p>
+            <p class="kpi-sub" id="kpi-surveys-sub">0 actual · 0 demo</p>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-icon kpi-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="kpi-label">Water-Saving Actions</p>
+            <p class="kpi-value" id="kpi-actions">0</p>
+            <p class="kpi-sub" id="kpi-actions-sub">0 actual · 0 demo</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Quick Links Grid -->
+      <div class="quick-grid">
+        <article class="card">
+          <h3>Spot a Leak?</h3>
+          <p>Log the campus location, issue type, and an optional photo in under 30 seconds.</p>
+          <button class="btn btn-outline" data-nav="report">Open Report Form</button>
+        </article>
+        <article class="card">
+          <h3>5 Practical Habits</h3>
+          <p>Explore simple campus water-saving tips and commit to practicing them daily.</p>
+          <button class="btn btn-outline" data-nav="awareness">View Awareness Tips</button>
+        </article>
+        <article class="card">
+          <h3>View Live Analytics</h3>
+          <p>Inspect issue categories, survey trends, and clearly labeled demo vs. actual metrics.</p>
+          <button class="btn btn-outline" data-nav="dashboard">Open Impact Dashboard</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== REPORT WATER WASTAGE ==================== -->
+    <section id="view-report" class="view" aria-labelledby="report-heading">
+      <div class="page-head">
+        <h1 id="report-heading">Report Water Wastage</h1>
+        <p>Help identify campus water issues early. Submissions are saved locally in this browser and appear immediately in the Admin / Data section.</p>
+      </div>
+
+      <div class="form-layout">
+        <form id="report-form" class="card form-card" novalidate>
+          <div class="form-group">
+            <label for="report-location">Location on Campus <span class="req">*</span></label>
+            <input
+              type="text"
+              id="report-location"
+              name="location"
+              placeholder="e.g., Academic Block B – 2nd Floor Washroom"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="report-type">Type of Issue <span class="req">*</span></label>
+            <select id="report-type" name="issueType" required>
+              <option value="">Select an issue type...</option>
+              <option value="Leaking tap">Leaking tap</option>
+              <option value="Tap left running">Tap left running</option>
+              <option value="Water cooler issue">Water cooler issue</option>
+              <option value="Toilet/washroom wastage">Toilet/washroom wastage</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="report-description">Description <span class="req">*</span></label>
+            <textarea
+              id="report-description"
+              name="description"
+              rows="4"
+              placeholder="Briefly describe the issue (e.g., continuous drip from basin tap #2 since morning)."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="report-photo">Optional Photo Upload</label>
+            <input type="file" id="report-photo" name="photo" accept="image/*" />
+            <small class="field-hint">Images are compressed automatically for local browser storage.</small>
+            <div id="photo-preview-wrap" class="photo-preview-wrap hidden">
+              <img id="photo-preview-img" alt="Selected water issue preview" />
+              <button type="button" class="btn btn-sm btn-ghost" id="remove-photo-btn">Remove Photo</button>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Report</button>
+            <button type="reset" class="btn btn-ghost">Clear Form</button>
+          </div>
+
+          <div id="report-feedback" class="alert hidden" role="alert"></div>
+        </form>
+
+        <aside class="card side-note">
+          <h3>Reporting Guidelines</h3>
+          <ul class="clean-list">
+            <li>Include the exact building, floor, and nearest landmark.</li>
+            <li>If a tap was simply left open, turn it off safely before logging the incident.</li>
+            <li>For urgent pipe bursts, notify campus facility staff directly in addition to logging here.</li>
+          </ul>
+          <hr class="divider" />
+          <p class="small-muted">
+            <strong>Data Transparency:</strong> Every report submitted here is tagged as
+            <span class="badge badge-actual">Actual Data</span> to separate it from preloaded
+            <span class="badge badge-demo">Demo Data</span>.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== AWARENESS SECTION ==================== -->
+    <section id="view-awareness" class="view" aria-labelledby="awareness-heading">
+      <div class="page-head">
+        <h1 id="awareness-heading">Water Conservation Awareness</h1>
+        <p>Small, consistent student habits prevent thousands of liters of campus water wastage every semester. Commit to the actions below to log your pledge.</p>
+      </div>
+
+      <div class="pledge-summary card">
+        <div>
+          <strong>Your Session Progress:</strong>
+          <span id="pledge-progress-text">0 of 5 actions practiced</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="pledge-progress-bar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="tips-grid" id="tips-grid">
+        <!-- Tip 1 -->
+        <article class="card tip-card" data-tip-id="tip-1" data-tip-title="Turn off taps properly">
+          <div class="tip-num">01</div>
+          <h3>Turn off taps properly.</h3>
+          <p>Check that washroom and lab taps are completely closed after washing hands. Even a slow drip can waste over 15 liters a day.</p>
+          <button type="button" class="btn btn-outline btn-sm tip-action-btn">Commit to This Action</button>
+        </article>
+
+        <!-- Tip 2 -->
+        <article class="card tip-card" data-tip-id="tip-2" data-tip-title="Report leaking taps">
+          <div class="tip-num">02</div>
+          <h3>Report leaking taps.</h3>
+          <p>Do not assume someone else has noticed. Log leaking taps, running flushes, or faulty coolers immediately so maintenance can act.</p>
+          <button type="button" class="btn btn-outline btn-sm tip-action-btn">Commit to This Action</button>
+        </article>
+
+        <!-- Tip 3 -->
+        <article class="card tip-card" data-tip-id="tip-3" data-tip-title="Avoid unnecessary water use">
+          <div class="tip-num">03</div>
+          <h3>Avoid unnecessary water use.</h3>
+          <p>Turn off the tap while lathering soap or brushing teeth in hostels, and avoid letting drinking coolers run needlessly.</p>
+          <button type="button" class="btn btn-outline btn-sm tip-action-btn">Commit to This Action</button>
+        </article>
+
+        <!-- Tip 4 -->
+        <article class="card tip-card" data-tip-id="tip-4" data-tip-title="Use only the required amount of water">
+          <div class="tip-num">04</div>
+          <h3>Use only the required amount of water.</h3>
+          <p>Fill your bottle or cup with only what you plan to drink instead of pouring out half-full bottles at campus coolers.</p>
+          <button type="button" class="btn btn-outline btn-sm tip-action-btn">Commit to This Action</button>
+        </article>
+
+        <!-- Tip 5 -->
+        <article class="card tip-card" data-tip-id="tip-5" data-tip-title="Encourage others to save water">
+          <div class="tip-num">05</div>
+          <h3>Encourage others to save water.</h3>
+          <p>Share polite reminders with peers and hostel mates. Visible peer habits are one of the strongest drivers of campus behavior change.</p>
+          <button type="button" class="btn btn-outline btn-sm tip-action-btn">Commit to This Action</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== QUICK SURVEY ==================== -->
+    <section id="view-survey" class="view" aria-labelledby="survey-heading">
+      <div class="page-head">
+        <h1 id="survey-heading">Quick Student Awareness Survey</h1>
+        <p>5 short questions to understand campus water awareness and identify practical improvements. Responses are anonymous and saved in local browser storage.</p>
+      </div>
+
+      <form id="survey-form" class="card form-card survey-card" novalidate>
+        <div class="form-group">
+          <label for="q1-awareness">1. How aware are you of daily water wastage on campus? <span class="req">*</span></label>
+          <select id="q1-awareness" name="awareness" required>
+            <option value="">Select an option...</option>
+            <option value="Very aware">Very aware</option>
+            <option value="Moderately aware">Moderately aware</option>
+            <option value="Slightly aware">Slightly aware</option>
+            <option value="Not aware">Not aware</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q2-notice">2. How often do you notice water wastage (leaking taps, running coolers, etc.) on campus? <span class="req">*</span></label>
+          <select id="q2-notice" name="noticeWastage" required>
+            <option value="">Select an option...</option>
+            <option value="Frequently">Frequently</option>
+            <option value="Sometimes">Sometimes</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Never">Never</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q3-report">3. When you notice a leak or water wastage, do you usually report it? <span class="req">*</span></label>
+          <select id="q3-report" name="reportLeaks" required>
+            <option value="">Select an option...</option>
+            <option value="Yes, always">Yes, always</option>
+            <option value="Sometimes">Sometimes</option>
+            <option value="Rarely">Rarely</option>
+            <option value="No, I do not know where to report">No, I do not know where to report</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q4-reminders">4. Would campus reminders and an easy digital reporting tool encourage you to save water? <span class="req">*</span></label>
+          <select id="q4-reminders" name="remindersInfluence" required>
+            <option value="">Select an option...</option>
+            <option value="Yes, definitely">Yes, definitely</option>
+            <option value="Probably yes">Probably yes</option>
+            <option value="Not sure">Not sure</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q5-suggestion">5. What is one practical improvement the campus should make to reduce water wastage? <span class="req">*</span></label>
+          <textarea
+            id="q5-suggestion"
+            name="suggestion"
+            rows="3"
+            placeholder="e.g., Put QR reporting posters near washrooms and repair dripping cooler taps weekly."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit Survey Response</button>
+          <button type="reset" class="btn btn-ghost">Reset</button>
+        </div>
+
+        <div id="survey-feedback" class="alert hidden" role="alert"></div>
+      </form>
+    </section>
+
+    <!-- ==================== IMPACT DASHBOARD ==================== -->
+    <section id="view-dashboard" class="view" aria-labelledby="dashboard-heading">
+      <div class="page-head">
+        <div class="page-head-row">
+          <div>
+            <h1 id="dashboard-heading">Impact Dashboard</h1>
+            <p>Visual summary of campus reports, student survey responses, and awareness progress.</p>
+          </div>
+          <span class="data-mode-pill" id="dashboard-data-badge">Includes Demo Data</span>
+        </div>
+      </div>
+
+      <div id="chart-offline-notice" class="alert alert-warning hidden">
+        Chart.js could not be loaded (you may be offline). Numerical summaries remain available in the Admin / Data section.
+      </div>
+
+      <div class="charts-grid">
+        <!-- Chart 1: Issue Categories -->
+        <article class="card chart-card">
+          <div class="chart-head">
+            <h3>Issue Categories</h3>
+            <span class="badge" id="badge-chart-categories">Demo Data</span>
+          </div>
+          <p class="chart-sub">Breakdown of submitted water wastage reports by category.</p>
+          <div class="chart-wrap">
+            <canvas id="chart-categories"></canvas>
+            <div class="chart-empty hidden" id="empty-chart-categories">No reports available yet.</div>
+          </div>
+        </article>
+
+        <!-- Chart 2: Number of Reports (Actual vs Demo / Status) -->
+        <article class="card chart-card">
+          <div class="chart-head">
+            <h3>Number of Reports</h3>
+            <span class="badge" id="badge-chart-reports">Demo Data</span>
+          </div>
+          <p class="chart-sub">Comparison of reports by data source and current resolution status.</p>
+          <div class="chart-wrap">
+            <canvas id="chart-reports"></canvas>
+            <div class="chart-empty hidden" id="empty-chart-reports">No reports available yet.</div>
+          </div>
+        </article>
+
+        <!-- Chart 3: Survey Responses -->
+        <article class="card chart-card">
+          <div class="chart-head">
+            <h3>Survey Responses: Awareness & Reminder Impact</h3>
+            <span class="badge" id="badge-chart-survey">Demo Data</span>
+          </div>
+          <p class="chart-sub">Student awareness levels (Q1) and response to reminders (Q4).</p>
+          <div class="chart-wrap">
+            <canvas id="chart-survey"></canvas>
+            <div class="chart-empty hidden" id="empty-chart-survey">No survey responses available yet.</div>
+          </div>
+        </article>
+
+        <!-- Chart 4: Awareness Before vs After -->
+        <article class="card chart-card">
+          <div class="chart-head">
+            <h3>Awareness: Before vs. After Intervention</h3>
+            <span class="badge" id="badge-chart-before-after">Demo Data</span>
+          </div>
+          <p class="chart-sub" id="before-after-sub">
+            Sample structure showing how baseline and follow-up survey metrics will be compared.
+          </p>
+          <div class="chart-wrap">
+            <canvas id="chart-before-after"></canvas>
+            <div class="chart-empty hidden" id="empty-chart-before-after">
+              No actual Before/After comparison data entered yet. Update <code>ACTUAL_BEFORE_AFTER</code> in <code>data.js</code> once pre- and post-intervention surveys are completed.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== ADMIN / DATA SECTION ==================== -->
+    <section id="view-admin" class="view" aria-labelledby="admin-heading">
+      <div class="page-head">
+        <div class="page-head-row">
+          <div>
+            <h1 id="admin-heading">Admin & Data Management</h1>
+            <p>Review submitted reports and survey responses, export records to CSV, or manage demo data. No login is required for local demonstration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary Counts -->
+      <div class="mini-kpi-grid">
+        <div class="mini-kpi">
+          <span>Total Reports</span>
+          <strong id="admin-total-reports">0</strong>
+        </div>
+        <div class="mini-kpi">
+          <span>Actual Reports</span>
+          <strong id="admin-actual-reports">0</strong>
+        </div>
+        <div class="mini-kpi">
+          <span>Total Surveys</span>
+          <strong id="admin-total-surveys">0</strong>
+        </div>
+        <div class="mini-kpi">
+          <span>Actual Surveys</span>
+          <strong id="admin-actual-surveys">0</strong>
+        </div>
+        <div class="mini-kpi">
+          <span>Water-Saving Actions</span>
+          <strong id="admin-total-actions">0</strong>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="card toolbar-card">
+        <div class="toolbar-group">
+          <button type="button" class="btn btn-primary btn-sm" id="export-reports-btn">Export Reports (CSV)</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="export-surveys-btn">Export Surveys (CSV)</button>
+        </div>
+        <div class="toolbar-group">
+          <button type="button" class="btn btn-outline btn-sm" id="clear-demo-btn">Clear Demo Data</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="restore-demo-btn">Restore Demo Data</button>
+          <button type="button" class="btn btn-danger-outline btn-sm" id="clear-all-btn">Clear All Data</button>
+        </div>
+      </div>
+
+      <!-- Reports Table -->
+      <div class="card table-card">
+        <div class="table-header">
+          <h2>Submitted Water Wastage Reports</h2>
+          <span class="small-muted">Click status to toggle Open / Resolved</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Data Source</th>
+                <th>Location</th>
+                <th>Issue Type</th>
+                <th>Description</th>
+                <th>Photo</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="reports-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Survey Table -->
+      <div class="card table-card">
+        <div class="table-header">
+          <h2>Student Survey Responses</h2>
+          <span class="small-muted">All responses stored locally in browser localStorage</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Data Source</th>
+                <th>Awareness (Q1)</th>
+                <th>Notice Wastage (Q2)</th>
+                <th>Report Leaks (Q3)</th>
+                <th>Reminders Help? (Q4)</th>
+                <th>Improvement Suggestion (Q5)</th>
+              </tr>
+            </thead>
+            <tbody id="surveys-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECT INFORMATION ==================== -->
+    <section id="view-about" class="view" aria-labelledby="about-heading">
+      <div class="page-head">
+        <h1 id="about-heading">Project Information</h1>
+        <p>BU100 SDG Action Lab documentation outlining our problem scope, methodology, limitations, and next steps.</p>
+      </div>
+
+      <div class="info-grid">
+        <article class="card info-card">
+          <h2>1. Problem Statement</h2>
+          <p>
+            Routine water wastage on campus—including dripping washroom faucets, taps left running,
+            and malfunctioning water coolers—accumulates into significant avoidable water loss.
+            Many students notice these issues but lack a quick, visible way to report them or are
+            unsure whom to inform, leading to delayed repairs and low everyday conservation awareness.
+          </p>
+        </article>
+
+        <article class="card info-card">
+          <h2>2. SDG 6 Connection</h2>
+          <p>
+            This project aligns with <strong>UN Sustainable Development Goal 6: Clean Water and Sanitation</strong>,
+            specifically <strong>Target 6.4</strong> (increasing water-use efficiency) and community participation in
+            responsible water management. Encouraging sustainable daily habits among students creates
+            measurable local action toward a global resource challenge.
+          </p>
+        </article>
+
+        <article class="card info-card">
+          <h2>3. Our Intervention</h2>
+          <p>
+            <strong>Save Every Drop</strong> is a lightweight, browser-based digital intervention combining three
+            core elements: (1) a 30-second campus water wastage reporting form, (2) five actionable
+            conservation tips with interactive pledges, and (3) a 5-question student awareness survey
+            paired with a transparent impact dashboard and CSV export.
+          </p>
+        </article>
+
+        <article class="card info-card">
+          <h2>4. How We Collected Evidence</h2>
+          <p>
+            Evidence is collected through two primary channels: campus observation/wastage logs
+            submitted via the reporting form (with optional photographs) and structured responses
+            from our 5-question student survey. All sample entries displayed during initial testing are
+            explicitly tagged as <strong>Demo Data</strong> and separated from verified field entries in
+            both the interface and exported CSV files.
+          </p>
+        </article>
+
+        <article class="card info-card">
+          <h2>5. Impact Measurement</h2>
+          <p>
+            Project impact is evaluated using clear, observable indicators: total verified wastage
+            reports logged, most frequent issue categories and campus hotspots, number of student
+            water-saving pledges recorded, and changes in student awareness or reporting willingness
+            between baseline (before) and follow-up (after) survey rounds.
+          </p>
+        </article>
+
+        <article class="card info-card">
+          <h2>6. Limitations</h2>
+          <ul class="clean-list">
+            <li>Uses browser <code>localStorage</code> rather than a central server, so records stay on the device used to submit them unless exported and merged as CSV.</li>
+            <li>No direct automated integration with campus facility maintenance ticketing systems yet.</li>
+            <li>Self-reported survey answers may reflect stated intent rather than long-term observed behavior.</li>
+          </ul>
+        </article>
+
+        <article class="card info-card info-card-full">
+          <h2>7. Future Improvements</h2>
+          <ul class="clean-list">
+            <li>Connect the reporting form to a shared cloud database or campus maintenance email workflow for real-time repair notifications.</li>
+            <li>Place QR code posters next to washrooms and water coolers linking directly to the reporting form with pre-filled locations.</li>
+            <li>Add monthly campus water-meter tracking in collaboration with administration to quantify actual liters saved.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Save Every Drop</strong> – Campus Water Conservation · BU100 SDG Action Lab (SDG 6)</p>
+      <p class="small-muted">Runs 100% locally using HTML, CSS, JavaScript & browser localStorage.</p>
+    </div>
+  </footer>
+
+  <!-- Photo Viewer Modal -->
+  <div id="photo-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-caption">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close image preview">×</button>
+      <img id="modal-img" alt="Submitted wastage report photo" />
+      <p id="modal-caption" class="modal-caption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
